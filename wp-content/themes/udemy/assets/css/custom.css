@@ -1,0 +1,6 @@
+.menu-item-has-children {
+    position: relative;
+}
+.menu-item-has-children:hover .dropdown-menu {
+    display: block;
+}
