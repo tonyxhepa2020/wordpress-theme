@@ -20,11 +20,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="879bbf92-daf7-4697-8912-43a8e3f38416" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/wordpress.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/udemy/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/udemy/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/udemy/includes/widgets.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/udemy/searchform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/udemy/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/images/icon-search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/images/slider_next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/images/slider_prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/images/status.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/css/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/Oswald-Regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/js/html5shiv.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/js/respond.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/js/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/assets/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/includes/custom-nav-walker.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/includes/custom-nav-walker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/includes/front/enqueue.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/includes/front/enqueue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/includes/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/includes/setup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/udemy/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/udemy/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +74,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iUsT8XDg8b6GZSxYHeG20IqZrM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601973509238</updated>
-      <workItem from="1601973511030" duration="1693000" />
+      <workItem from="1601973511030" duration="16140000" />
     </task>
     <servers />
   </component>
@@ -79,6 +118,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="380" y="439" key="NewPhpFileDialog" timestamp="1601981007134">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="380" y="439" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601981007134" />
     <state x="46" y="165" key="SettingsEditor" timestamp="1601973898558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
