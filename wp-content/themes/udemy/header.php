@@ -63,6 +63,7 @@
 
                                 ?>
                             </div><!-- #logo end -->
+                        </div>
                             <div class="header_bottom_right">
                                 <a href="#">
                                     <?php
@@ -72,7 +73,6 @@
                                     ?>
                                 </a>
                             </div>
-                        </div>
                     </div>
                 </div>
         </header>
@@ -116,7 +116,14 @@
                         </div><!-- #top-search end -->
                     <?php
                     }
+                    ?>
+                    <?php
 
+                    if (get_theme_mod('ju_show_header_popular_posts')) {
+                        ?>
+
+                        <?php
+                    }
                     ?>
                 </div>
             </nav>

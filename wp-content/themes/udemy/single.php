@@ -2,218 +2,169 @@
 
 <!-- Content
 ============================================= -->
-<section id="content">
+<section id="mainContent">
+    <div class="container">
+        <div class="content_bottom">
+            <div class="col-lg-8 col-md-8">
+                <!-- Post Content
+                ============================================= -->
+                <div class="content_bottom_left p-2">
 
-    <div class="content-wrap">
+                    <?php
 
-        <div class="container clearfix">
+                    if( have_posts() ){
+                        while( have_posts() ){
+                            the_post();
 
-            <!-- Post Content
-            ============================================= -->
-            <div class="postcontent nobottommargin clearfix">
+                            global $post;
+                            $author_ID          =   $post->post_author;
+                            $author_URL         =   get_author_posts_url( $author_ID );
 
-                <?php
-
-                if( have_posts() ){
-                    while( have_posts() ){
-                        the_post();
-
-                        global $post;
-                        $author_ID          =   $post->post_author;
-                        $author_URL         =   get_author_posts_url( $author_ID );
-
-                        ?>
-                        <div id="post-<?php the_ID(); ?>" <?php post_class( 'single-post nobottommargin' ); ?>>
-
-                            <!-- Single Post
-                            ============================================= -->
-                            <div class="entry clearfix">
-
+                            ?>
+                            <div id="post-<?php the_ID(); ?>" class="single_page_area">
+                                <ol class="breadcrumb">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Technology</a></li>
+                                    <li class="active">Duis quis erat non nunc fringilla </li>
+                                </ol>
                                 <!-- Entry Title
+                               ============================================= -->
+                                <h2 class="post_titile"><?php the_title(); ?></h2>
+                                <!-- .entry-title end -->
+                                <div class="single_page_content">
+                                <!-- Single Post
                                 ============================================= -->
-                                <div class="entry-title">
-                                    <h2><?php the_title(); ?></h2>
-                                </div><!-- .entry-title end -->
-
-                                <!-- Entry Meta
-                                ============================================= -->
-                                <ul class="entry-meta clearfix">
-                                    <li><i class="icon-calendar3"></i> <?php echo get_the_date(); ?></li>
-                                    <li>
-                                        <a href="<?php echo $author_URL; ?>">
-                                            <i class="icon-user"></i> <?php the_author(); ?>
-                                        </a>
-                                    </li>
-                                    <li><i class="icon-folder-open"></i> <?php the_category( ' ' ); ?></li>
-                                    <li><a href="#"><i class="icon-comments"></i> <?php comments_number(); ?></a></li>
-                                </ul><!-- .entry-meta end -->
-
-                                <!-- Entry Image
-                                ============================================= -->
-                                <div class="entry-image">
-                                    <?php
-
-                                    if( has_post_thumbnail() ){
-                                        ?>
-                                        <div class="entry-image">
-                                            <a href="<?php the_permalink(); ?>">
-                                                <?php 
-                                                the_post_thumbnail( 'full' ); 
-                                                ?>
-                                            </a>
-                                        </div>
-                                        <?php
-                                    }
-
-                                    ?>
-                                </div><!-- .entry-image end -->
-
-                                <!-- Entry Content
-                                ============================================= -->
-                                <div class="entry-content notopmargin">
-
-                                    <?php 
-                                    
-                                    the_content(); 
-
-                                    $defaults = array(
-                                        'before'           => '<p class="text-center">' . __( 'Pages:', 'udemy' ),
-                                        'after'            => '</p>',
-                                    );
-
-                                    wp_link_pages( $defaults );
-                                    
-                                    ?>
-                                    <!-- Post Single - Content End -->
-
-                                    <!-- Tag Cloud
+                                    <!-- Entry Meta
                                     ============================================= -->
-                                    <div class="tagcloud clearfix bottommargin">
-                                        <?php the_tags( '', ' ' ); ?>
-                                    </div><!-- .tagcloud end -->
+                                        <div class="post_commentbox">
+                                            <span><i class="fa fa-calendar"></i><?php echo get_the_date(); ?></span>
+                                            <a href="#"><i class="fa fa-tags"></i><?php the_category( ' ' ); ?></a>
+                                        </div>
+                                    <!-- .entry-meta end -->
+                                    <!-- Entry Image
+                                    ============================================= -->
+                                        <?php
 
-                                    <div class="clear"></div>
-
-                                </div>
-                            </div><!-- .entry end -->
-
-                            <!-- Post Navigation
-                            ============================================= -->
-                            <div class="post-navigation clearfix">
-
-                                <div class="col_half nobottommargin">
-                                    <?php previous_post_link(); ?>
-                                </div>
-
-                                <div class="col_half col_last tright nobottommargin">
-                                    <?php next_post_link(); ?>
-                                </div>
-
-                            </div><!-- .post-navigation end -->
-
-                            <div class="line"></div>
-
-                            <!-- Post Author Info
-                            ============================================= -->
-                            <div class="card">
-                                <div class="card-header">
-                                    <strong>
-                                        Posted by
-                                        <a href="<?php echo $author_URL; ?>"><?php the_author(); ?></a>
-                                    </strong>
-                                </div>
-                                <div class="card-body">
-                                    <div class="author-image">
-                                        <?php echo get_avatar( $author_ID, 90, '', false, [ 'class' => 'img-circle' ] ); ?>
-                                    </div>
-                                    <?php echo nl2br( get_the_author_meta( 'description' ) ); ?>
-                                </div>
-                            </div><!-- Post Single - Author End -->
-
-                            <div class="line"></div>
-
-                            <h4>Related Posts:</h4>
-
-                            <div class="related-posts clearfix">
-
-                                <?php
-
-                                $categories             =   get_the_category();
-                                
-                                $rp_query               =   new WP_Query([
-                                    'posts_per_page'    =>  2,
-                                    'post__not_in'      =>  [ $post->ID ],
-                                    'cat'               =>  !empty($categories) ?  $categories[0]->term_id : null
-                                ]);
-
-                                if( $rp_query->have_posts() ){
-                                    while( $rp_query->have_posts() ){
-                                        $rp_query->the_post();
+                                        if( has_post_thumbnail() ){
+                                            ?>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <img src="<?php the_post_thumbnail_url(); ?>" class="img-center" width="100%">
+                                                </a>
+                                            <?php
+                                        }
 
                                         ?>
-                                        <div class="mpost clearfix">
-                                            <?php
+                                    <!-- .entry-image end -->
 
-                                            if( has_post_thumbnail() ){
-                                                ?>
-                                                <div class="entry-image">
-                                                    <a href="<?php the_permalink(); ?>">
-                                                        <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                                    </a>
-                                                </div>
-                                                <?php
-                                            }
+                                    <!-- Entry Content
+                                    ============================================= -->
 
-                                            ?>
-                                            
-                                            <div class="entry-c">
-                                                <div class="entry-title">
-                                                    <h4>
-                                                        <a href="<?php the_permalink(); ?>">
-                                                            <?php the_title(); ?>
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <ul class="entry-meta clearfix">
-                                                    <li><i class="icon-calendar3"></i> <?php echo get_the_date(); ?></li>
-                                                    <li><i class="icon-comments"></i> <?php comments_number( '0' ); ?></li>
-                                                </ul>
-                                                <div class="entry-content">
-                                                    <?php the_excerpt(); ?>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <?php
-                                    }
 
-                                    wp_reset_postdata();
-                                }
+                                        the_content();
 
-                                ?>
+                                        $defaults = array(
+                                            'before'           => '<p>' . __( 'Pages:', 'udemy' ),
+                                            'after'            => '</p>',
+                                        );
+
+                                        wp_link_pages( $defaults );
+
+                                        ?>
+                                        <!-- Post Single - Content End -->
+
+                                        <!-- Tag Cloud
+                                        ============================================= -->
+                                        <div class="tagcloud clearfix bottommargin">
+                                            <?php the_tags( '', ' ' ); ?>
+                                        </div><!-- .tagcloud end -->
+
+                                        <div class="clear"></div>
+                                </div>
+                                <!-- .entry end -->
                             </div>
 
-                            <?php 
-                            
-                            if( comments_open() || get_comments_number() ){
-                                comments_template(); 
-                            }
-                            
-                            ?>
-                        </div>
-                        <?php
+                             <?php
+                       }
                     }
-                }
-
                 ?>
+                    <div class="share_post">
+                        <a class="facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a>
+                        <a class="twitter" href="#"><i class="fa fa-twitter"></i>Twitter</a>
+                        <a class="googleplus" href="#"><i class="fa fa-google-plus"></i>Google+</a>
+                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i>LinkedIn</a>
+                        <a class="stumbleupon" href="#"><i class="fa fa-stumbleupon"></i>StumbleUpon</a>
+                        <a class="pinterest" href="#"><i class="fa fa-pinterest"></i>Pinterest</a>
+                    </div>
 
-            </div><!-- .postcontent end -->
+                </div>
+                 <!-- Post Navigation
+                 ============================================= -->
+                <?php if(is_single()) : ?>
+                 <div class="post_pagination">
+                     <!-- Previous and Next Post -->
+                     <div class="prev"> <a class="angle_left" href="#"><i class="fa fa-angle-double-left"></i></a>
+                         <div class="pagincontent"> <span>Previous Post</span> <?php previous_post_link( '%link', '%title'); ?></div>
+                     </div>
+                     <div class="next">
+                         <div class="pagincontent"> <span>Next Post</span><?php next_post_link( '%link', '%title' ); ?></div>
+                         <a class="angle_right" href="#"><i class="fa fa-angle-double-right"></i></a>
+                     </div>
+                     <?php endif; ?>
+                 </div>
+                 <!-- .post-navigation end -->
+                  <div class="similar_post">
+                      <h2>Similar Post You May Like <i class="fa fa-thumbs-o-up"></i></h2>
+                      <ul class="small_catg similar_nav wow fadeInDown animated">
+                                    <?php
 
-            <?php get_sidebar(); ?>
+                                    $categories             =   get_the_category();
 
+                                    $rp_query               =   new WP_Query([
+                                        'posts_per_page'    =>  2,
+                                        'post__not_in'      =>  [ $post->ID ],
+                                        'cat'               =>  !empty($categories) ?  $categories[0]->term_id : null
+                                    ]);
+
+                                    if( $rp_query->have_posts() ){
+                                        while( $rp_query->have_posts() ){
+                                            $rp_query->the_post();
+
+                                            ?>
+                                           <li>
+                                                <?php
+
+                                                if( has_post_thumbnail() ){
+                                                    ?>
+                                                        <a class="media-left related-img" href="<?php the_permalink(); ?>">
+                                                            <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                                        </a>
+                                                    <?php
+                                                }
+
+                                                ?>
+
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                                </div>
+                                            </li>
+                                            <?php
+                                        }
+
+                                        wp_reset_postdata();
+                                    }
+
+                                    ?>
+                                </ul>
+                  </div>
+                <!-- .postcontent end -->
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <?php get_sidebar(); ?>
+            </div>
         </div>
-
     </div>
-
-</section><!-- #content end -->
+</section>
+<!-- #content end -->
 
 <?php get_footer(); ?>

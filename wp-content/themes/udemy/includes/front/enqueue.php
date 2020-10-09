@@ -35,13 +35,13 @@ function ju_enqueue(){
         'a.more-link{ color: ' . $read_more_color . '; border-color: '. $read_more_color. '; }'
     );
 
-    wp_register_script( 'ju_juery', $uri . '/assets/js/jquery.min.js', [], $ver, true );
+    wp_register_script( 'ju_jquery', $uri . '/assets/js/jquery.min.js', [], $ver, true );
     wp_register_script( 'ju_bootstrap', $uri . '/assets/js/bootstrap.min.js', [], $ver, true );
     wp_register_script( 'ju_wow', $uri . '/assets/js/wow.min.js', [], $ver, true );   
     wp_register_script( 'ju_slick', $uri . '/assets/js/slick.min.js', [], $ver, true );
     wp_register_script( 'ju_custom', $uri . '/assets/js/custom.js', [], $ver, true );
 
-    wp_enqueue_script( 'ju_juery' );
+    wp_enqueue_script( 'ju_jquery' );
     wp_enqueue_script( 'ju_bootstrap' );
     wp_enqueue_script( 'ju_wow' );
     wp_enqueue_script( 'ju_slick' );

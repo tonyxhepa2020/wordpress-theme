@@ -18,7 +18,7 @@ function ju_setup_theme(){
         'attachments'               =>  [
             'image-about'           =>  [
                 'post_title'        =>  __( 'About', 'udemy' ),
-                'file'              =>  'assets/images/about/1.jpg', // URL relative to the template directory.
+                'file'              =>  'assets/images/about/1.jpg', // URL relative to the template-parts directory.
             ],
         ],
 

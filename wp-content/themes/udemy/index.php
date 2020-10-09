@@ -2,12 +2,9 @@
 
 <!-- Content
 ============================================= -->
-<section id="content">
-
+<section id="content" class="container">
     <div class="content-wrap">
-
         <?php
-
         if( !is_single() && is_home() &&
             function_exists( 'wpp_get_mostpopular' ) &&
             get_theme_mod( 'ju_show_header_popular_posts' ) ){
@@ -33,7 +30,7 @@
         }
 
         ?>
-        
+
 
         <div class="container clearfix">
 
@@ -59,7 +56,7 @@
                     }
 
                     ?>
-                    
+
 
                 </div><!-- #posts end -->
 
